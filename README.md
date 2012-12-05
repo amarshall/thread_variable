@@ -30,7 +30,7 @@ Simply `extend ThreadVariable` and call `thread_variable` in classes you want th
 
     C.foo  #=> "bar"
 
-If you don’t want to `extend ThreadLocal` everywhere you can instead do
+If you don’t want to `extend ThreadVariable` everywhere you can instead do
 
     require 'thread_variable/core_ext'
 
