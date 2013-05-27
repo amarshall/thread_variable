@@ -16,23 +16,27 @@ Install as your normally would, nothing special here. Only compatible with Ruby 
 
 Simply `extend ThreadVariable` and call `thread_variable` in classes you want thread variables in:
 
-    class C
-      extend ThreadVariable
-      thread_variable :foo
-    end
+```ruby
+class C
+  extend ThreadVariable
+  thread_variable :foo
+end
 
-    C.foo = 'bar'
+C.foo = 'bar'
 
-    Thread.new do
-      C.foo = 'baz'
-      C.foo  #=> "baz"
-    end.join
+Thread.new do
+  C.foo = 'baz'
+  C.foo  #=> "baz"
+end.join
 
-    C.foo  #=> "bar"
+C.foo  #=> "bar"
+```
 
 If you don’t want to `extend ThreadVariable` everywhere you can instead do
 
-    require 'thread_variable/core_ext'
+```ruby
+require 'thread_variable/core_ext'
+```
 
 which will `include ThreadVariable` in both `Class` & `Module`.
 
