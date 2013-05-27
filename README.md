@@ -1,7 +1,7 @@
 # ThreadVariable
 
 [![Build Status](https://secure.travis-ci.org/amarshall/thread_variable.png)](http://travis-ci.org/amarshall/thread_variable)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/amarshall/thread_variable)
+[![Code Climate](https://codeclimate.com/github/amarshall/thread_variable/badges)](https://codeclimate.com/github/amarshall/thread_variable)
 
 Makes it easy to create and use thread-local variables. This encapsulates two patterns:
 
