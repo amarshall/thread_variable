@@ -18,6 +18,12 @@ describe ThreadVariable do
     expect(klass.my_var).to eq klass_var
   end
 
+  it "cannot set a thread variable outside the class scope" do
+    expect do
+      klass.thread_variable :made_publicly
+    end.to raise_error NoMethodError, /private method/
+  end
+
   it "is local to a thread" do
     klass_var = klass.my_var = double
     Thread.new do
